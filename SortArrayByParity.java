@@ -1,3 +1,5 @@
+package LogicWhile;
+
 import java.util.Scanner;
 
 public class SortArrayByParity {
