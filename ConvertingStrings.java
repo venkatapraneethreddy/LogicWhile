@@ -1,6 +1,6 @@
 package LogicWhile;
 
-public class Example {
+public class ConvertingStrings {
 	
 	
     public static void main(String[] args) {
