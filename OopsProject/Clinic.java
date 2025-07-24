@@ -1,6 +1,5 @@
 package LogicWhile.OopsProject;
 
-
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.*;
@@ -89,7 +88,7 @@ public class Clinic {
             return;
         }
 
-        System.out.println("\nRegistered Patients:");
+        System.out.println("\nRegistered Patients (who haven't booked yet):");
         for (Patient p : patients) p.displayInfo();
 
         System.out.print("Enter Patient ID: ");
@@ -127,7 +126,11 @@ public class Clinic {
 
         Appointment ap = new Appointment(selectedDoctor, selectedPatient, date);
         appointments.add(ap);
-        System.out.println("Appointment booked successfully!");
+
+        // Remove the patient from the list after booking
+        patients.remove(selectedPatient);
+
+        System.out.println("Appointment booked successfully! Patient is now removed from available list.");
     }
 
     private static void viewAppointments() {
