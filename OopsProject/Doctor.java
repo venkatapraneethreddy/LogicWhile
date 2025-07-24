@@ -18,7 +18,11 @@ public class Doctor extends Person {
         return specialization;
     }
 
-    public void displayInfo() {
-        System.out.println("Doctor ID: " + doctorId + " | Name: " + name + " | Specialization: " + specialization);
+    // Modified to include appointment count
+    public void displayInfo(int appointmentCount) {
+        System.out.println("Doctor ID: " + doctorId +
+                " | Name: " + name +
+                " | Specialization: " + specialization +
+                " | Appointments: " + appointmentCount);
     }
 }

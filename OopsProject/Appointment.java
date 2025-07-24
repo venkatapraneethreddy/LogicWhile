@@ -28,7 +28,7 @@ public class Appointment {
 
     public void displayAppointment() {
         System.out.println("Appointment:");
-        doctor.displayInfo();
+        doctor.displayInfo(0); // Default count = 0 (not important here)
         patient.displayInfo();
         System.out.println("Date: " + date.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
     }

@@ -1,6 +1,7 @@
 package LogicWhile.OopsProject;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.*;
 
@@ -74,7 +75,12 @@ public class Clinic {
         }
 
         System.out.println("\nAvailable Doctors:");
-        for (Doctor d : doctors) d.displayInfo();
+        for (Doctor d : doctors) {
+            int count = (int) appointments.stream()
+                    .filter(a -> a.getDoctor().getDoctorId() == d.getDoctorId())
+                    .count();
+            d.displayInfo(count);
+        }
 
         System.out.print("Enter Doctor ID: ");
         int did = sc.nextInt();
