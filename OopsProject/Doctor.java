@@ -1,4 +1,5 @@
-package LogicWhile;
+package LogicWhile.OopsProject;
+
 
 public class Doctor extends Person {
     private String specialization;

@@ -1,4 +1,5 @@
-package LogicWhile;
+package LogicWhile.OopsProject;
+
 
 public class Person {
     protected String name;
